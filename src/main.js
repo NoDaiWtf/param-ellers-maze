@@ -9,7 +9,7 @@ const search = new Proxy(new URLSearchParams(window.location.search), {
 
 export let seed = search.seed || "asdasd";
 export let rightProb = 1 - parseFloat(search.vProb || "0.3");
-export let bottomProb = 1 - parseFloat(search.hProb || "0.5");
+export let bottomProb = parseFloat(search.hProb || "0.5");
 export let loopProb = parseFloat(search.lProb || "0.0");
 
 export let size =
